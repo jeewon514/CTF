@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>점수판</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>순위</th>
+            <th>사용자</th>
+            <th>점수</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.score }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

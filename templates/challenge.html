@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Challenges</h2>
+
+{% if challenges|length == 0 %}
+<p>등록된 문제가 없습니다.</p>
+{% endif %}
+
+<ul class="challenge-list">
+    {% for c in challenges %}
+    <li>
+        <h3>{{ c.title }}({{ c.points }} pts)</h3>
+        <p>{{ c.description }}</p>
+        <form action="{{ url_for('submit', challenge_id=c.id) }}" method=post>
+            <input type="text" name="flag" placeholder="Enter flag">
+            <button type="summit">summit</button>
+    {% endfor %}
+</ul>
+
+{% endblock %}

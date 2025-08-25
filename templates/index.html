@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block static %}
+<h2>CTF 연습 플랫폼</h2>
+    <p>로그인 후 문제를 풀고, 점수를 얻어보세요.</p>
+    <p>
+        <a class="btn" href="{{ url_for('challenges') }}">문제 보러가기</a>
+        {% if not session.get('user_id') %}
+            <a class="btn outline" href="{{ url_for('login') }}">로그인</a>
+        {% endif %}
+    </p>
+    
+{% endblock %}
