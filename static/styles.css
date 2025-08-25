@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header h1 {
+    color: darkred;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.flash-messages {
+    color: green;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
