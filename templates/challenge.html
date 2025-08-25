@@ -8,12 +8,22 @@
 
 <ul class="challenge-list">
     {% for c in challenges %}
-    <li>
-        <h3>{{ c.title }}({{ c.points }} pts)</h3>
-        <p>{{ c.description }}</p>
-        <form action="{{ url_for('submit', challenge_id=c.id) }}" method=post>
-            <input type="text" name="flag" placeholder="Enter flag">
-            <button type="summit">summit</button>
+    <li class="challenge-item">
+        <div class="challenge-head">
+            <strong>{{ c.title }}</strong>
+            <span class="points">{{ c.points }} pts</span>
+        </div>
+        <pre class="desc">{{ c.description }}</pre>
+
+        {% if session.get('user_id') %}
+            <form method="post" action="{{ url_for('submit', challenge_id=c.id) }}" class="submit-form">
+                <input type="text" name="flag" placeholder="flag{...}" autocomplete="off" required>
+                <button type="submit" class="btn">제출</button>
+            </form>
+        {% else %}
+            <p class="muted">플래그 제출은 로그인 후 가능합니다.</p>
+        {% endif %}
+    </li>
     {% endfor %}
 </ul>
 
