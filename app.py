@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
+from werkzeug.security import generate_password_hash, check_password_hash
 from models import db, User, Challenge, Submission
 
 app = Flask(__name__)
@@ -15,16 +16,20 @@ def index():
 
 @app.route('/login', methods=['GET','POST'])
 def login():
+    # POST
     if request.method == 'POST':
         username = request.form['username']
-        password = request.form['passqord']
+        password = request.form['password']
         user = User.query.filter_by(username=username).first()
+
         if user and check_password_hash(user.password, password):
             session['user_id'] = user.id
-            flash("로그인 성공!")
+            flash('로그인 성공')
             return redirect(url_for('challenges'))
         else:
-            flash("잘못된 사용자명 또는 비밀번호입니다.")
+            flash('아이디 또는 비밀번호가 올바르지 않습니다.')
+            return render_template('user.html')
+    # GET
     return render_template('login.html')
 
 
