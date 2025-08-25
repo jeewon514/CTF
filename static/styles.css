@@ -1,22 +1,40 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+:root { --gap: 12px; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, Arial, sans-serif; margin:0; color:#222; }
+a { color: inherit; }
+
+.site-header, .site-footer {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 18px; border-bottom:1px solid #eee;
+}
+.site-footer { border-top:1px solid #eee; border-bottom:none; }
+.site-header h1 { margin:0; font-size:20px; }
+.site-header nav a { margin-left:14px; text-decoration:none; color:#444; }
+
+.container { max-width:880px; margin:24px auto; padding:0 16px; }
+
+.flash { padding:0; list-style:none; margin:0 0 16px; }
+.flash li { background:#f0fff0; border:1px solid #cfe8cf; padding:10px; margin-bottom:8px; }
+
+.btn { display:inline-block; padding:8px 14px; border:1px solid #333; background:#333; color:#fff; border-radius:6px; text-decoration:none; }
+.btn.outline { background:#fff; color:#333; }
+
+.form { display:grid; gap: var(--gap); max-width:360px; }
+.form label { display:grid; gap:6px; }
+.form input[type="text"], .form input[type="password"] {
+  padding:8px 10px; border:1px solid #ccc; border-radius:6px;
 }
 
-header h1 {
-    color: darkred;
-}
+.challenge-list { list-style:none; padding:0; display:grid; gap:16px; }
+.challenge-item { border:1px solid #eee; border-radius:10px; padding:14px; }
+.challenge-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.points { font-weight:600; color:#7a3; }
+.desc { background:#fafafa; padding:10px; border-radius:6px; overflow:auto; }
+.submit-form { display:flex; gap:10px; margin-top:10px; }
+.submit-form input[type="text"] { flex:1; padding:8px 10px; border:1px solid #ccc; border-radius:6px; }
 
-nav a {
-    margin-right: 10px;
-    text-decoration: none;
-}
+.table { border-collapse: collapse; width:100%; }
+.table th, .table td { border:1px solid #eee; padding:10px; text-align:left; }
+.table thead th { background:#fafafa; }
+.muted { color:#777; }
 
-.flash-messages {
-    color: green;
-    font-weight: bold;
-}
-
-table {
-    border-collapse: collapse;
-}
