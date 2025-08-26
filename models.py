@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
 db = SQLAlchemy()
 
@@ -11,11 +12,13 @@ class User(db.Model):
     
 # 문제 모델
 class Challenge(db.Model):
+    __tablename__ = 'challenge'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     description = db.Column(db.Text)
     flag = db.Column(db.String(200))
     points = db.Column(db.Integer)
+    created_at  = db.Column(db.DateTime, server_default=db.func.now(), nullable=False)
 
 # 제출 기록 모델
 class Submission(db.Model):
@@ -24,3 +27,4 @@ class Submission(db.Model):
     challenge_id = db.Column(db.Integer, db.ForeignKey('challenge.id'))
     submitted_flag = db.Column(db.String(200))
     correct = db.Column(db.Boolean)
+    created_at    = db.Column(db.DateTime, server_default=db.func.now(), nullable=False)
