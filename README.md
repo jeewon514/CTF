@@ -17,10 +17,10 @@
 </br>
 
 ## ⚙️설치 & 실행 (Installation & Usage)
-> flask 프로젝트 생성
-- python -m venv venv
->> source venv\Scripts\activate
->> pip install flask flask-login flask-sqlalchemy (패키지 설치)
+- flask 프로젝트 생성
+> python -m venv venv
+> source venv\Scripts\activate
+> pip install flask flask-login flask-sqlalchemy (패키지 설치)
 
 </br>
 
