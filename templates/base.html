@@ -9,13 +9,12 @@
         <header>
             <h1>Mini CTF Platform</h1>
             <nav>
-                <a href="#">Home</a>
+                <a href="{{ url_for('index') }}">Home</a>
                 <a href="{{ url_for('login') }}">Login</a>
                 <a href="{{ url_for('challenges') }}">Challenges</a>
                 <a href="{{ url_for('scoreboard') }}">Scoreboard</a>
             </nav>
         </header>
-
         <main class="container">
         {% with messages=get_flashed_messages() %}
             {% if messages %}
@@ -24,14 +23,10 @@
             </ul>
             {% endif %}
         {% endwith %}
-
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
         </main>
-
-        <footer class="site-footer">
-            <small>© 2025 Mini CTF</small>
-        </footer>
-
+            <footer class="site-footer">
+                <small>© 2025 Mini CTF</small>
+            </footer>
     </body>
 </html>
