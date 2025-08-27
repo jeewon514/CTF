@@ -60,9 +60,14 @@
 
 </br>
 
+## 📄 Documents (문서)
+- [프로젝트 보고서 PDF](C:\vscode\hopy-CTF\CTF\docs\CTF_Platform.pdf)
+
 ## 📂 Project Structure
 ```bash
 📦 CTF
+ ┣ 📂 docs
+ ┃ ┣ 📜 CTF_platform.pdf
  ┣ 📂 static
  ┃ ┣ 📜 styles.css
  ┣ 📂 templates
