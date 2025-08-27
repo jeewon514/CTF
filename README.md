@@ -61,7 +61,9 @@
 </br>
 
 ## 📄 Documents (문서)
-- [프로젝트 보고서 PDF](C:\vscode\hopy-CTF\CTF\docs\CTF_Platform.pdf)
+- [프로젝트 보고서 PDF](https://github.com/jeewon514/CTF/blob/main/docs/CTF_Platform.pdf)
+
+</br>
 
 ## 📂 Project Structure
 ```bash
