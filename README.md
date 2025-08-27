@@ -1,4 +1,4 @@
-## 🔉CTF 연습 PlatForm (Project Title)
+## 🔉CTF 연습 PlatForm 
 >사용자가 문제를 풀고 플래그를 제출하면 DB에 점수가 기록되고, Scoreboard에 반영되는 CTF 플랫폼을 구현한 프로젝트
 - Hopy 25-1 여름방학 프로젝트
 - 컴퓨터공학과 & 사이버보안과
