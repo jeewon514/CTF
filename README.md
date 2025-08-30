@@ -41,7 +41,7 @@
 
 </br>
 
-## ⚙️설치 & 실행 (Installation & Usage)
+## ⚙️Installation & Usage (설치 & 실행)
 - flask 프로젝트 설치
 > python -m venv venv </br>
 > source venv\Scripts\activate </br>
